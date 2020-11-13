@@ -135,13 +135,13 @@ class Bear : public ZooAnimal {
 Bear yogi;
 Bear winnie = yogi;
 ```
-![image]()
+![image](https://github.com/lizhicun/c_obj_2/blob/main/image/yogi_winnie.jpg)
 
 当一个 base class object 用一个 derived class 的 object 初始化时，其 vptr 的复制也必须保证安全：
 ```
 ZooAnimal franny = yogi;	// 译注：这会发生切割（sliced）行为
 ```
-![image]()
+![image](https://github.com/lizhicun/c_obj_2/blob/main/image/yogi_winnie.jpg)
 
 合成出的 ZooAnimal copy constructor 会明确设定 object 的 vptr 指向 ZooAnimal class 的 virtual table，而非单纯的拷贝
 
